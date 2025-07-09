@@ -6,7 +6,7 @@
 /*   By: jaferna2 <jaferna2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/09 16:19:41 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/07/09 19:15:39 by jaferna2         ###   ########.fr       */
+/*   Updated: 2025/07/09 20:03:59 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 #define BUREAUCRAT_HPP
 
 #include <iostream>
+#include "AForm.hpp"
+
+class AForm;
 
 class Bureaucrat
 {
@@ -37,6 +40,8 @@ public:
 		const char *what() const throw();
 	};
 	
+	void signForm(AForm &form); 
+	void executeForm(AForm &form);
 };
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& b);

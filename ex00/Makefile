@@ -6,7 +6,7 @@ CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 # Directories and files
-SRC			= source/Dog.cpp source/Cat.cpp source/Animal.cpp main.cpp
+SRC			= source/Bureaucrat.cpp main.cpp
 OBJ			= $(SRC:.cpp=.o)
 
 all:	$(NAME)

@@ -6,7 +6,7 @@
 /*   By: jaferna2 <jaferna2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/09 16:19:39 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/07/09 19:20:47 by jaferna2         ###   ########.fr       */
+/*   Updated: 2025/07/09 20:01:17 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,18 @@ std::ostream& operator<<(std::ostream& os, const Bureaucrat& b)
 {
 	os << b.getName() << ", bureaucrat grade " << b.getGrade() << ".";
 	return (os);
+}
+
+void	Bureaucrat::signForm(Form &f)
+{
+	try
+	{
+		f.beSigned(*this);
+		std::cout << this->_name << " signed " << f.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << this->_name << " couldn't sign " << f.getName()
+				  << " because " << e.what();
+	}
 }

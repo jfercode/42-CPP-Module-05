@@ -6,33 +6,23 @@
 /*   By: jaferna2 <jaferna2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/09 16:10:38 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/07/09 19:05:24 by jaferna2         ###   ########.fr       */
+/*   Updated: 2025/07/09 20:04:30 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/Bureaucrat.hpp"
+#include "include/AForm.hpp"
 
-int main()
+int main() 
 {
-	try
+    try 
 	{
-		Bureaucrat b1("Alice", 1);
-		std::cout << b1 << std::endl;
-
-		b1.incrementGrade();
-	}
-	catch (std::exception &e)
+        
+    }
+	catch (std::exception &e) 
 	{
-		std::cerr << e.what() << std::endl;
-	}
-	try
-	{
-		Bureaucrat b2("Bob", 151);
-	}
-	catch (std::exception &e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
-
-	return 0;
+        std::cerr << "Caught error in main: " << e.what() << std::endl;
+    }
+    return (0);
 }
+
