@@ -6,7 +6,7 @@
 /*   By: jaferna2 <jaferna2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/09 19:14:19 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/07/14 17:45:47 by jaferna2         ###   ########.fr       */
+/*   Updated: 2025/07/14 18:26:53 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,8 @@ std::ostream& operator<<(std::ostream& os, const AForm& f)
 {
 	os << f.getName() << ", form to sign grade " << f.getToSign()
 	   << ", form grade to Execute " << f.getToExecute()
-	   << ", form is signed " << f.getIsSigned() << std::endl;
+	   << ", form is signed " << f.getIsSigned() 
+	   << ", form target " << f.getTarget() << std::endl;
 	return (os);
 }
 
